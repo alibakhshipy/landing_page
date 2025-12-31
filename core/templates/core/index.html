@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}صفحه لودینگ{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="logo-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Shield_icon.svg/1024px-Shield_icon.svg.png" alt="لوگو بیمه">
+</div>
+
+<div class="progress-bar">
+    <div class="progress" id="progress">0%</div>
+</div>
+
+<div class="loading-text" id="main-text">در حال بارگذاری خدمات بیمه‌ای...</div>
+<div class="sub-text" id="sub-text">لطفا صبر کنید، لحظه‌ای دیگر آماده خواهد شد.</div>
+{% endblock %}

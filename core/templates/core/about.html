@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  خدمات بیمه ای
+{% endblock %}
+
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>خدمات جامع بیمه‌ای ویژه دانشگاه‌ها</h1>
+    <p>ارائه خدمات بیمه‌ای هوشمند، شفاف و قابل اطمینان برای جامعه دانشگاهی</p>
+
+    <div class="section">
+      <h3>چرا خدمات ما؟</h3>
+      <ul>
+        <li>پوشش کامل نیازهای بیمه‌ای دانشگاه</li>
+        <li>فرآیند ساده و شفاف</li>
+        <li>مشاوره و پشتیبانی تخصصی</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>خدمات بیمه‌ای</h3>
+      <ul>
+        <li>بیمه شخص ثالث و بدنه خودرو</li>
+        <li>بیمه آتش‌سوزی و اموال</li>
+        <li>بیمه درمان تکمیلی</li>
+        <li>بیمه عمر و سرمایه‌گذاری</li>
+        <li>بیمه مسافرتی</li>
+        <li>بیمه مسئولیت</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>مخاطبان</h3>
+      <ul>
+        <li>اعضای هیئت علمی</li>
+        <li>کارکنان دانشگاه</li>
+        <li>دانشجویان</li>
+        <li>پیمانکاران دانشگاه</li>
+      </ul>
+    </div>
+
+    <div class="section badge">
+      <strong>وضعیت پروژه:</strong>
+      این سامانه در فاز توسعه (MVP) قرار دارد و نسخه اولیه جهت ارائه آماده شده است.
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 40px;
+  direction: rtl;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+}
+h1 {
+  color: #0072ce;
+}
+.section {
+  margin-top: 30px;
+}
+ul {
+  line-height: 2;
+}
+.badge {
+  background: #e0f2ff;
+  padding: 15px;
+  border-radius: 8px;
+  color: #333;
+}
