@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (insuranceBtn) {
             setTimeout(function () {
                 insuranceBtn.classList.add("active");
-                insuranceBtn.href = "https://landing-page-1-1xox.onrender.com/insurance";
+                insuranceBtn.href = "insurance/";
                 console.log("🎯 دکمه فعال شد");
             }, 500);
         }
