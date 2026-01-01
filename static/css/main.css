@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Arial, sans-serif;
   background: #f5f7fa;
   margin: 0;
@@ -15,6 +15,12 @@ body {
 h1 {
   color: #0072ce;
 }
+.intro-text {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 30px;
+}
 .section {
   margin-top: 30px;
 }
@@ -26,4 +32,453 @@ ul {
   padding: 15px;
   border-radius: 8px;
   color: #333;
+  margin-top: 30px;
+}
+.contact {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-right: 4px solid #0072ce;
+  border-radius: 8px;
+  font-size: 1.1em;
+  line-height: 1.8;
+} */
+
+
+/* Reset و فونت */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Vazir', 'Segoe UI', Tahoma, Geneva, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  min-height: 100vh;
+  direction: rtl;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* کانتینر اصلی */
+.university-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* هدر صفحه */
+.page-header {
+  background: linear-gradient(90deg, #0052a5 0%, #0072ce 100%);
+  border-radius: 16px 16px 0 0;
+  padding: 25px 40px;
+  color: white;
+  box-shadow: 0 8px 24px rgba(0, 82, 165, 0.15);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-circle {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo-text h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.logo-text p {
+  opacity: 0.9;
+  font-size: 15px;
+}
+
+.header-badge .badge-version {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* محتوای اصلی */
+.main-content {
+  background: white;
+  border-radius: 0 0 16px 16px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-top: -5px;
+}
+
+/* معرفی */
+.intro-card {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e1efff 100%);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 40px;
+  border-right: 6px solid #0072ce;
+}
+
+.section-icon {
+  font-size: 50px;
+  color: #0072ce;
+  background: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0, 114, 206, 0.15);
+}
+
+.intro-content {
+  flex: 1;
+}
+
+.page-title {
+  font-size: 32px;
+  color: #003366;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.title-highlight {
+  color: #0072ce;
+  font-weight: 800;
+}
+
+.intro-description {
+  font-size: 18px;
+  color: #444;
+  max-width: 800px;
+}
+
+.intro-description strong {
+  color: #0052a5;
+  font-weight: 700;
+}
+
+/* شبکه خدمات */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 114, 206, 0.15);
+  border-color: #cce7ff;
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  color: #003366;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.service-card > p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.service-features {
+  list-style: none;
+  text-align: right;
+  width: 100%;
+  margin-top: auto;
+}
+
+.service-features li {
+  padding: 8px 0;
+  color: #555;
+  position: relative;
+  padding-right: 20px;
+}
+
+.service-features li:before {
+  content: "✓";
+  color: #28a745;
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+}
+
+/* بخش مخاطبان */
+.audience-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 24px;
+  color: #003366;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-title i {
+  color: #0072ce;
+}
+
+.audience-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.audience-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.audience-item:hover {
+  background: #edf4ff;
+  border-color: #cce7ff;
+}
+
+.audience-item i {
+  font-size: 24px;
+  color: #0072ce;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 114, 206, 0.1);
+}
+
+.audience-item span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #003366;
+}
+
+/* بخش ارتباط */
+.contact-section {
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #003366 0%, #0052a5 100%);
+  border-radius: 20px;
+  padding: 40px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 82, 165, 0.25);
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-header i {
+  font-size: 36px;
+  color: #80c5ff;
+}
+
+.contact-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.contact-description {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 25px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.phone-number i {
+  font-size: 32px;
+  color: #4dabf7;
+}
+
+.number-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number-label {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 5px;
+}
+
+.number-value {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  direction: ltr;
+  font-family: 'Courier New', monospace;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.contact-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.contact-note i {
+  color: #ffd166;
+}
+
+/* وضعیت پروژه */
+.status-notice {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #856404;
+}
+
+.status-notice i {
+  font-size: 24px;
+  color: #f39c12;
+}
+
+.notice-content p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .university-container {
+    padding: 10px;
+  }
+  
+  .page-header {
+    padding: 20px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .logo-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .main-content {
+    padding: 25px;
+  }
+  
+  .intro-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-card {
+    padding: 25px 20px;
+  }
+  
+  .phone-number {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .number-value {
+    font-size: 22px;
+  }
 }

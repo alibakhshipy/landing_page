@@ -2,53 +2,162 @@
 {% load static %}
 
 {% block title %}
-  خدمات بیمه ای
+ خدمات بیمه‌ای ویژه دانشگاه‌ها | بیمه ایران
 {% endblock %}
-
 
 {% block extra_css %}
   <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 {% endblock %}
 
 {% block content %}
-  <div class="container">
-    <h1>خدمات جامع بیمه‌ای ویژه دانشگاه‌ها</h1>
-    <p>ارائه خدمات بیمه‌ای هوشمند، شفاف و قابل اطمینان برای جامعه دانشگاهی</p>
+  <div class="university-container">
+    <!-- هدر با گرادینت آبی -->
+    <header class="page-header">
+      <div class="header-content">
+        <div class="logo-section">
+          <div class="logo-circle">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="logo-text">
+            <h2>بیمه ایران</h2>
+            <p>نمایندگی رسمی خدمات دانشگاهی</p>
+          </div>
+        </div>
+        <div class="header-badge">
+          <span class="badge-version">نسخه MVP</span>
+        </div>
+      </div>
+    </header>
 
-    <div class="section">
-      <h3>چرا خدمات ما؟</h3>
-      <ul>
-        <li>پوشش کامل نیازهای بیمه‌ای دانشگاه</li>
-        <li>فرآیند ساده و شفاف</li>
-        <li>مشاوره و پشتیبانی تخصصی</li>
-      </ul>
-    </div>
+    <!-- بخش اصلی محتوا -->
+    <main class="main-content">
+      <!-- معرفی -->
+      <section class="intro-card">
+        <div class="section-icon">
+          <i class="fas fa-university"></i>
+        </div>
+        <div class="intro-content">
+          <h1 class="page-title">
+            <span class="title-highlight">خدمات بیمه‌ای ویژه</span>
+            دانشگاه‌ها
+          </h1>
+          <p class="intro-description">
+            ارائه خدمات جامع بیمه‌ای برای <strong>اعضای هیئت علمی، کارکنان و دانشجویان</strong>
+            با مشاوره تخصصی و پشتیبانی مستقیم نماینده رسمی بیمه ایران
+          </p>
+        </div>
+      </section>
 
-    <div class="section">
-      <h3>خدمات بیمه‌ای</h3>
-      <ul>
-        <li>بیمه شخص ثالث و بدنه خودرو</li>
-        <li>بیمه آتش‌سوزی و اموال</li>
-        <li>بیمه درمان تکمیلی</li>
-        <li>بیمه عمر و سرمایه‌گذاری</li>
-        <li>بیمه مسافرتی</li>
-        <li>بیمه مسئولیت</li>
-      </ul>
-    </div>
+      <!-- کارت‌های خدمات -->
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="card-icon" style="background-color: #e3f2fd;">
+            <i class="fas fa-car" style="color: #1976d2;"></i>
+          </div>
+          <h3>بیمه خودرو</h3>
+          <p>شخص ثالث و بدنه</p>
+          <ul class="service-features">
+            <li>تخفیف ویژه دانشگاهیان</li>
+            <li>پرداخت اقساطی</li>
+          </ul>
+        </div>
 
-    <div class="section">
-      <h3>مخاطبان</h3>
-      <ul>
-        <li>اعضای هیئت علمی</li>
-        <li>کارکنان دانشگاه</li>
-        <li>دانشجویان</li>
-        <li>پیمانکاران دانشگاه</li>
-      </ul>
-    </div>
+        <div class="service-card">
+          <div class="card-icon" style="background-color: #fff3e0;">
+            <i class="fas fa-fire" style="color: #f57c00;"></i>
+          </div>
+          <h3>بیمه آتش‌سوزی</h3>
+          <p>طرح حامی دانشگاه‌ها</p>
+          <ul class="service-features">
+            <li>پوشش اموال دانشگاهی</li>
+            <li>تخفیف گروهی</li>
+          </ul>
+        </div>
 
-    <div class="section badge">
-      <strong>وضعیت پروژه:</strong>
-      این سامانه در فاز توسعه (MVP) قرار دارد و نسخه اولیه جهت ارائه آماده شده است.
-    </div>
+        <div class="service-card">
+          <div class="card-icon" style="background-color: #e8f5e9;">
+            <i class="fas fa-user-shield" style="color: #388e3c;"></i>
+          </div>
+          <h3>بیمه مسئولیت</h3>
+          <p>ویژه مؤسسات آموزشی</p>
+          <ul class="service-features">
+            <li>پوشش حوادث محیطی</li>
+            <li>پشتیبانی حقوقی</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="card-icon" style="background-color: #f3e5f5;">
+            <i class="fas fa-users" style="color: #7b1fa2;"></i>
+          </div>
+          <h3>بیمه گروهی</h3>
+          <p>کارکنان و اساتید</p>
+          <ul class="service-features">
+            <li>طرح‌های اختصاصی</li>
+            <li>پوشش خانواده</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- بخش مخاطبان -->
+      <section class="audience-section">
+        <h2 class="section-title">
+          <i class="fas fa-user-graduate"></i>
+          مخاطبان این خدمات
+        </h2>
+        <div class="audience-list">
+          <div class="audience-item">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>اعضای هیئت علمی</span>
+          </div>
+          <div class="audience-item">
+            <i class="fas fa-briefcase"></i>
+            <span>کارکنان دانشگاه</span>
+          </div>
+          <div class="audience-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>دانشجویان</span>
+          </div>
+          <div class="audience-item">
+            <i class="fas fa-hard-hat"></i>
+            <span>پیمانکاران دانشگاه</span>
+          </div>
+        </div>
+      </section>
+      <!-- راه ارتباطی -->
+      <section class="contact-section">
+        <div class="contact-card">
+          <div class="contact-header">
+            <i class="fas fa-headset"></i>
+            <h2>پشتیبانی تخصصی</h2>
+          </div>
+          <p class="contact-description">
+            کارشناسان ما آماده پاسخگویی به سوالات و ارائه مشاوره تخصصی هستند
+          </p>
+          <div class="contact-info">
+            <div class="phone-number">
+              <i class="fas fa-phone"></i>
+              <div class="number-display">
+                <span class="number-label">شماره تماس:</span>
+                <span class="number-value">۰۲۱ - ۴۵۶۷۸۹۰۰</span>
+              </div>
+            </div>
+            <div class="contact-note">
+              <i class="fas fa-clock"></i>
+              <span>پاسخگویی روزهای شنبه تا چهارشنبه ۸:۳۰ تا ۱۶:۳۰</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- وضعیت پروژه -->
+      <div class="status-notice">
+        <i class="fas fa-info-circle"></i>
+        <div class="notice-content">
+          <p><strong>وضعیت پروژه:</strong> این سامانه در فاز توسعه (MVP) قرار دارد و نسخه اولیه جهت ارائه آماده شده است.</p>
+        </div>
+      </div>
+    </main>
   </div>
 {% endblock %}
