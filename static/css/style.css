@@ -1,107 +1,167 @@
+/* Reset کامل */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* بدنه اصلی */
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #e0f2ff, #f5f7fa);
-    font-family: Arial, sans-serif;
-    flex-direction: column;
-    overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a2463, #1e3c72, #2a5298);
+  color: white;
+  min-height: 100vh;
+  direction: rtl;
+  overflow-x: hidden; /* جلوگیری از اسکرول افقی */
+  position: relative;
 }
 
-.logo-container {
-    position: relative;
-    width: 140px;
-    height: 140px;
-    margin-bottom: 30px;
-    animation: float 2s ease-in-out infinite;
+/* صفحه لودینگ - اصلاح شده */
+.loading-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow-y: auto; /* اجازه اسکرول عمودی */
 }
 
-.logo-container img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 5px solid #0072ce;
-    animation: rotate 2s linear infinite;
+/* کانتینر اصلی */
+.loading-container {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
 }
 
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+/* لوگو */
+.loading-logo {
+  font-size: 60px;
+  margin-bottom: 20px;
+  animation: logoFloat 3s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* متن */
+.loading-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.loading-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+}
+
+/* نوار پیشرفت */
+.progress-container {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .progress-bar {
-    width: 280px;
-    height: 25px;
-    background: #e0e0e0;
-    border-radius: 15px;
-    overflow: hidden;
-    margin-bottom: 15px;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  width: 100%;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.progress {
-    height: 100%;
-    width: 0%;
-    background: #0072ce;
-    border-radius: 15px;
-    text-align: center;
-    line-height: 25px;
-    color: white;
-    font-weight: bold;
-    transition: width 0.3s ease-in-out;
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #0072ce, #4dabf7);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+  position: relative;
 }
 
-.loading-text {
-    font-size: 20px;
-    color: #333;
-    text-align: center;
-    font-weight: bold;
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: progressShine 2s infinite;
 }
 
-.sub-text {
-    font-size: 15px;
-    color: #555;
-    margin-top: 5px;
+@keyframes progressShine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
-.insurance-btn {
-    margin-top: 25px;
-    padding: 14px 34px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #0072ce, #004a99);
-    color: white;
+/* دکمه */
+.insurance-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #0072ce, #0052a5);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.insurance-button.active {
+  opacity: 1;
+  pointer-events: auto;
+  animation: buttonPulse 2s infinite;
+}
+
+@keyframes buttonPulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 114, 206, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 114, 206, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 114, 206, 0); }
+}
+
+/* حالت موبایل */
+@media (max-width: 768px) {
+  .loading-container {
+    padding: 25px 20px;
+    margin: 10px;
+  }
+  
+  .loading-title {
+    font-size: 22px;
+  }
+  
+  .loading-subtitle {
     font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.6s ease;
-}
-
-/* حالت غیرفعال (قبل از 100٪) */
-.disabled-btn {
-    opacity: 0.35;
-    pointer-events: none;
-    filter: grayscale(70%);
-    cursor: not-allowed;
-}
-
-/* حالت فعال (بعد از 100٪) */
-.active-btn {
-    opacity: 1;
-    pointer-events: auto;
-    filter: none;
-    animation: popIn 0.6s ease forwards;
-    cursor: pointer;
-}
-
-@keyframes popIn {
-    0% { transform: scale(0.9); }
-    60% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+  }
+  
+  .insurance-button {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
 }

@@ -1,24 +1,60 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}صفحه لودینگ{% endblock %}
+{% block title %}صفحه لودینگ | بیمه ایران{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+  /* اضافه کردن انیمیشن‌های ضروری */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .loading-container {
+    animation: fadeIn 0.5s ease-out;
+  }
+</style>
 {% endblock %}
 
 {% block content %}
-<div class="logo-container">
-  <img src="{% static 'images/logo.png' %}" alt="Logo">
+<div class="loading-page">
+  <div class="loading-container">
+    <!-- لوگو -->
+    <div class="loading-logo">🛡</div>
+    
+    <!-- عنوان -->
+    <h1 class="loading-title" id="main-text">سامانه بیمه دانشگاهی</h1>
+    <p class="loading-subtitle" id="sub-text">در حال راه‌اندازی سیستم</p>
+    
+    <!-- پیشرفت -->
+    <div class="progress-container">
+      <div class="progress-header">
+        <span>وضعیت بارگذاری</span>
+        <span id="progress-percent">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+    
+    <!-- مراحل -->
+    <div class="progress-steps">
+      <div class="step active">احراز هویت</div>
+      <div class="step">بارگذاری داده</div>
+      <div class="step">اتصال سرویس</div>
+      <div class="step">آماده‌سازی</div>
+    </div>
+    
+    <!-- دکمه -->
+    <a href="#" class="insurance-button" id="insurance-btn">ورود به خدمات بیمه</a>
+    
+    <!-- پیام پایین -->
+    <div class="loading-footer">
+      <p>پشتیبانی:<span dir="ltr"> ۰۲۱-۴۵۶۷۸۹۰۰</span></p>
+    </div>
+  </div>
 </div>
-
-<div class="progress-bar">
-  <div id="progress" class="progress">0%</div>
-</div>
-
-<div id="main-text" class="loading-text">شروع بارگذاری...</div>
-<div id="sub-text" class="sub-text">لطفا منتظر بمانید</div>
-
-<a id="insurance-btn" class="insurance-btn disabled-btn" href="#">خدمات بیمه</a>
 {% endblock %}
 
 {% block extra_js %}
