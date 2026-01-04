@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (insuranceBtn) {
             setTimeout(function () {
                 insuranceBtn.classList.add("active");
-                insuranceBtn.href = "insurance/";
+                insuranceBtn.href = "allameh/";
                 console.log("🎯 دکمه فعال شد");
             }, 500);
         }

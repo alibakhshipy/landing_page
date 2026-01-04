@@ -1,0 +1,269 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+خدمات بیمه‌ای ویژه دانشگاه علامه طباطبایی | بیمه ایران
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/allameh.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="university-container">
+    <!-- هدر با گرادینت آبی -->
+    <header class="page-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-circle">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="logo-text">
+                    <h2>بیمه ایران</h2>
+                    <p>نمایندگی رسمی دانشگاه علامه طباطبایی</p>
+                </div>
+                <div class="theme-switcher">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">
+                    <span class="theme-icon">🌙</span>
+                    <span class="theme-text">تم تیره</span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-badge">
+                <span class="badge-version">طرح ویژه دانشگاهی</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- بخش اصلی محتوا -->
+    <main class="main-content">
+        <!-- معرفی -->
+        <section class="intro-card">
+            <div class="section-icon">
+                <i class="fas fa-university"></i>
+            </div>
+            <div class="intro-content">
+                <h1 class="page-title">
+                    <span class="title-highlight">خدمات بیمه‌ای ویژه</span>
+                    دانشگاه علامه طباطبایی
+                </h1>
+                <p class="intro-description">
+                    ارائه خدمات جامع بیمه‌ای برای <strong>اساتید، کارکنان و دانشجویان دانشگاه علامه طباطبایی</strong>
+                    با مشاوره تخصصی و پشتیبانی مستقیم نماینده رسمی بیمه ایران
+                </p>
+            </div>
+        </section>
+
+        <!-- کارت‌های خدمات - همه در یک شبکه -->
+        <div class="services-section">
+            <h2 class="section-title">
+                <i class="fas fa-list-check"></i>
+                کلیه خدمات بیمه‌ای ارائه‌شده
+            </h2>
+            
+            <div class="services-grid">
+                <!-- کارت 1: بیمه شخص ثالث و بدنه -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>بیمه شخص ثالث و بدنه</h3>
+                    <p>تخفیف ۲۵٪ - اقساط ۶ ماهه</p>
+                    <ul class="service-features">
+                        <li>تخفیف ویژه اعضای دانشگاه</li>
+                        <li>پرداخت اقساط تا ۶ ماه</li>
+                        <li>پوشش کامل خسارات</li>
+                        <li>پرداخت سریع خسارت</li>
+                    </ul>
+                </div>
+
+                <!-- کارت 2: بیمه آتش‌سوزی -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>بیمه آتش‌سوزی</h3>
+                    <p>تخفیف ۵۰٪ - اقساط ۸ ماهه</p>
+                    <ul class="service-features">
+                        <li>تخفیف استثنایی ۵۰٪</li>
+                        <li>اقساط تا ۸ ماه</li>
+                        <li>پوشش اموال دانشگاهی</li>
+                        <li>شامل حوادث طبیعی</li>
+                    </ul>
+                </div>
+
+                <!-- کارت 3: بیمه مسئولیت -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>بیمه مسئولیت</h3>
+                    <p>ویژه مؤسسات آموزشی</p>
+                    <ul class="service-features">
+                        <li>پوشش حوادث محیط دانشگاه</li>
+                        <li>پشتیبانی حقوقی تخصصی</li>
+                        <li>طرح ویژه مراکز آموزشی</li>
+                        <li>پوشش غرامت کارکنان</li>
+                    </ul>
+                </div>
+
+                <!-- کارت 4: بیمه گروهی -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>بیمه گروهی</h3>
+                    <p>کارکنان، اساتید و دانشجویان</p>
+                    <ul class="service-features">
+                        <li>طرح‌های اختصاصی</li>
+                        <li>پوشش اعضای خانواده</li>
+                        <li>معافیت مالیاتی</li>
+                        <li>خدمات مشاوره مالی</li>
+                    </ul>
+                </div>
+
+                <!-- کارت 5: بیمه عمر و سرمایه‌گذاری -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>بیمه عمر و سرمایه‌گذاری</h3>
+                    <p>تأمین آینده مالی</p>
+                    <ul class="service-features">
+                        <li>پس‌انداز با سود تضمینی</li>
+                        <li>معافیت مالیاتی کامل</li>
+                        <li>پوشش فوت به هر علت</li>
+                        <li>قابلیت دریافت وام</li>
+                    </ul>
+                </div>
+
+                <!-- کارت 6: بیمه درمان تکمیلی -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>بیمه درمان تکمیلی</h3>
+                    <p>پوشش سلامت کامل</p>
+                    <ul class="service-features">
+                        <li>درمان در بیمارستان‌های خصوصی</li>
+                        <li>خدمات پاراکلینیکی</li>
+                        <li>پوشش دندانپزشکی</li>
+                        <li>پوشش بیماری‌های خاص</li>
+                    </ul>
+                </div>
+
+                <!-- کارت 7: بیمه مهندسی -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>بیمه مهندسی</h3>
+                    <p>پروژه‌های ساختمانی</p>
+                    <ul class="service-features">
+                        <li>پوشش پروژه‌های عمرانی</li>
+                        <li>تأسیسات و تجهیزات دانشگاه</li>
+                        <li>نصب و راه‌اندازی</li>
+                        <li>ضمانت کیفیت کار</li>
+                    </ul>
+                </div>
+
+                <!-- کارت 8: بیمه مسافرتی -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>بیمه مسافرتی</h3>
+                    <p>سفرهای علمی و پژوهشی</p>
+                    <ul class="service-features">
+                        <li>پوشش حوادث مسافرتی</li>
+                        <li>خدمات درمانی در خارج</li>
+                        <li>پوشش وسایل شخصی</li>
+                        <li>پشتیبانی ۲۴ ساعته</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- بخش مخاطبان -->
+        <section class="audience-section">
+            <h2 class="section-title">
+                <i class="fas fa-user-graduate"></i>
+                مخاطبان این خدمات
+            </h2>
+            <div class="audience-list">
+                <div class="audience-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>اساتید و اعضای هیئت علمی</span>
+                </div>
+                <div class="audience-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>کارکنان دانشگاه</span>
+                </div>
+                <div class="audience-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>دانشجویان دانشگاه</span>
+                </div>
+                <div class="audience-item">
+                    <i class="fas fa-hard-hat"></i>
+                    <span>پیمانکاران دانشگاه علامه</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- راه ارتباطی -->
+        <section class="contact-section">
+            <div class="contact-card">
+                <div class="contact-header">
+                    <i class="fas fa-headset"></i>
+                    <h2>پشتیبانی تخصصی دانشگاه علامه</h2>
+                </div>
+                <p class="contact-description">
+                    کارشناسان اختصاصی بیمه ایران آماده پاسخگویی به سوالات و ارائه مشاوره تخصصی به اعضای دانشگاه هستند
+                </p>
+                <div class="contact-info">
+                    <!-- تماس تلفنی -->
+                    <div class="phone-number">
+                        <i class="fas fa-phone"></i>
+                        <div class="number-display">
+                            <span class="number-label">تماس تلفنی:</span>
+                            <a href="tel:+989366467519" class="number-value">۰۹۳۶۶۴۶۷۵۱۹</a>
+                        </div>
+                    </div>
+                    
+                    <!-- واتساپ -->
+                    <div class="phone-number whatsapp-number">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="number-display">
+                            <span class="number-label">واتساپ:</span>
+                            <a href="https://wa.me/989126467915?text=سلام%20من%20از%20دانشگاه%20علامه%20درباره%20بیمه%20سوال%20دارم" 
+                               target="_blank" 
+                               class="number-value whatsapp-link">
+                                ۰۹۱۲۶۴۶۷۹۱۵
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-note">
+                        <i class="fas fa-clock"></i>
+                        <span>پاسخگویی: شنبه تا چهارشنبه ۸:۳۰ تا ۱۶:۳۰ | پنج‌شنبه ۸:۳۰ تا ۱۳:۳۰</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- وضعیت پروژه -->
+        <div class="status-notice">
+            <i class="fas fa-info-circle"></i>
+            <div class="notice-content">
+                <p><strong>وضعیت پروژه:</strong> این سامانه در فاز ارائه خدمات به دانشگاه علامه طباطبایی قرار دارد و کلیه خدمات فعال می‌باشند.</p>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/allameh.js' %}"></script>
+<script src="{% static 'js/theme.js' %}"></script>
+{% endblock %}
